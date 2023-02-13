@@ -172,21 +172,12 @@ header {
   &-body {
     position: relative;
     padding-top: 0;
-    height: 100%;
+    min-height: 100%;
 
     hr {
       border: 0;
       height: 1px;
       background-color: rgba($black, 0.5);
-    }
-
-    button {
-      display: block;
-      width: 90%;
-      position: absolute;
-      bottom: 5rem;
-      left: 50%;
-      transform: translate(-50%, -50%);
     }
 
     .navbar-nav {
@@ -212,6 +203,15 @@ header {
           }
         }
       }
+    }
+
+    button {
+      display: block;
+      width: 90%;
+      position: absolute;
+      bottom: 5rem;
+      left: 50%;
+      transform: translate(-50%, -50%);
     }
   }
 }
