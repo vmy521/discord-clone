@@ -72,7 +72,7 @@ languages.forEach((language) => {
   let img = document.createElement("img");
   let span = document.createElement("span");
 
-  img.src = `../images/${language.flag}`;
+  img.src = `./images/${language.flag}`;
   span.innerText = language.text;
 
   li.appendChild(img);
