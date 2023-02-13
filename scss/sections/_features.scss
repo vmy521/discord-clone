@@ -1,0 +1,125 @@
+@use "../custom" as *;
+@use "../components/typography" as *;
+@use "../components/buttons" as *;
+
+.features {
+  overflow: hidden;
+
+  .feature {
+    padding: 4rem 1rem;
+
+    &:nth-of-type(2),
+    &:nth-of-type(4) {
+      background-color: $light-gray;
+    }
+
+    @include media-breakpoint-down(sm) {
+      min-height: 70vh;
+    }
+
+    @include media-breakpoint-up(md) {
+      min-height: 50vh;
+    }
+
+    @include media-breakpoint-up(lg) {
+      min-height: 100vh;
+    }
+
+    .row {
+      justify-content: center;
+      align-items: center;
+
+      .col-md-6:nth-child(2) {
+        @include media-breakpoint-up(lg) {
+          padding: 1rem 9rem;
+        }
+      }
+
+      h1 {
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin-top: 1rem;
+
+        @include media-breakpoint-up(md) {
+          font-size: 2.5rem;
+        }
+      }
+
+      p {
+        margin-top: 1rem;
+        font-size: 1rem;
+        line-height: 1.5;
+
+        @include media-breakpoint-up(xl) {
+          font-size: 1.3rem;
+        }
+      }
+    }
+
+    &:nth-of-type(4) {
+      h1 {
+        font-family: $primaryFont;
+        text-align: left;
+
+        @include media-breakpoint-up(xl) {
+          text-align: center;
+        }
+      }
+
+      img {
+        display: block;
+        width: 100%;
+      }
+
+      p {
+        line-height: 1.5;
+        font-size: 1rem;
+        text-align: left;
+
+        @include media-breakpoint-up(xl) {
+          padding: 0 10rem;
+          font-size: 1.2rem;
+          text-align: center;
+        }
+      }
+
+      .col-md-12:last-child {
+        padding: 7rem 1rem 0 1rem;
+        text-align: center;
+
+        .sparkle {
+          position: absolute;
+          top: 30%;
+          left: 0;
+          transform-origin: bottom;
+          transform: scale(1.5);
+
+          @include media-breakpoint-up(xl) {
+            top: 5%;
+            left: 0;
+            transform: scale(0.45);
+          }
+        }
+
+        h2 {
+          font-size: 2rem;
+          font-weight: 700;
+          text-align: left;
+
+          @include media-breakpoint-up(xl) {
+            text-align: center;
+          }
+        }
+
+        button {
+          margin-top: 2.5rem;
+
+          @include media-breakpoint-down(xl) {
+            display: block;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

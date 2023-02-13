@@ -1,0 +1,29 @@
+$blue: #404eed;
+$primary: #404eed;
+$black: #2a2e32;
+$white: #fff;
+$light-gray: #f5f5f5;
+
+// Navbar
+$navbar-toggler-focus-width: none;
+$navbar-light-color: $white;
+$navbar-light-toggler-border-color: unset;
+$navbar-light-brand-color: unset;
+$navbar-light-brand-hover-color: unset;
+$navbar-light-toggler-icon-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='#{$navbar-light-color}' stroke-linecap='square' stroke-miterlimit='10' stroke-width='5' d='M4 7h22M4 15h22M4 23h22'/></svg>");
+
+// Offcanvas
+$offcanvas-horizontal-width: 320px;
+
+$btn-border-width: none;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+);
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";

@@ -1,0 +1,48 @@
+@use "../custom" as *;
+@use "../components/typography" as *;
+
+.btn {
+  font-family: $primaryFont;
+  font-weight: 400;
+  font-size: 0.8rem;
+  color: $black;
+
+  &-primary {
+    background-color: $primary;
+    color: $white;
+
+    &:hover,
+    &:focus {
+      filter: brightness(150%);
+    }
+  }
+
+  &-white {
+    background: $white;
+    color: $black;
+
+    &:hover,
+    &:focus {
+      background: $white !important;
+      color: $primary !important;
+    }
+  }
+
+  &-dark {
+    background-color: $black;
+    color: $white;
+  }
+
+  &:hover {
+    box-shadow: 0 3px 10px rgba($black, 0.5);
+  }
+
+  &-lg {
+    padding: 0.8rem 1.8rem;
+    font-size: 1.2rem;
+
+    @include media-breakpoint-up(xl) {
+      padding: 0.8rem 2rem;
+    }
+  }
+}
