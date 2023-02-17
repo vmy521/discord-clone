@@ -1,3 +1,29 @@
+const features = document.querySelectorAll(".feature");
+
+const observer = new IntersectionObserver(
+  (entries) => {
+    console.log(entries);
+    entries.forEach((entry) => {
+      let h1 = entry.target.querySelector("h1");
+      let p = entry.target.querySelector("p");
+      let img = entry.target.querySelector("img");
+
+      h1.classList.toggle("show-feature", entry.isIntersecting);
+      p.classList.toggle("show-feature", entry.isIntersecting);
+      img.classList.toggle("show-feature", entry.isIntersecting);
+
+      if (entry.isIntersecting) observer.unobserve(entry.target);
+    });
+  },
+  {
+    threshold: 0.3,
+  }
+);
+
+features.forEach((feature) => {
+  observer.observe(feature);
+});
+
 const ul = document.querySelector(".dropdown");
 const overflow = document.querySelector(".overflow");
 const toggle = document.querySelector(".toggle");

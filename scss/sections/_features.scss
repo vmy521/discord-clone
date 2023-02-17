@@ -29,6 +29,19 @@
       justify-content: center;
       align-items: center;
 
+      img,
+      h1,
+      p {
+        transform: translateY(100px);
+        opacity: 0;
+        transition: 1s;
+      }
+
+      .show-feature {
+        transform: translateY(0);
+        opacity: 1 !important;
+      }
+
       .col-md-6:nth-child(2) {
         @include media-breakpoint-up(lg) {
           padding: 1rem 9rem;
@@ -93,6 +106,8 @@
           left: 0;
           transform-origin: bottom;
           transform: scale(1.5);
+          opacity: 1 !important;
+          transition: unset !important;
 
           @include media-breakpoint-up(xl) {
             top: 5%;
