@@ -1,3 +1,4 @@
+//Features section animation
 const features = document.querySelectorAll(".feature");
 
 const observer = new IntersectionObserver(
@@ -24,6 +25,7 @@ features.forEach((feature) => {
   observer.observe(feature);
 });
 
+// Custom Select
 const ul = document.querySelector(".dropdown");
 const overflow = document.querySelector(".overflow");
 const toggle = document.querySelector(".toggle");

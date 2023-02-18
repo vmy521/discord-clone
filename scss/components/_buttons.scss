@@ -26,6 +26,10 @@
       background: $white !important;
       color: $primary !important;
     }
+
+    @include media-breakpoint-up(xl) {
+      padding: 0.7rem 1rem;
+    }
   }
 
   &-dark {
