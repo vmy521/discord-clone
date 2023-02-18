@@ -192,6 +192,10 @@ header {
           color: $white;
         }
 
+        @include media-breakpoint-up(lg) {
+          font-size: 1rem;
+        }
+
         &:hover {
           background-color: rgba($black, 0.05);
           color: rgba(dodgerblue, 0.8);
